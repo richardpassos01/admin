@@ -1,0 +1,32 @@
+extends ../common/index
+
+block head
+
+block content
+    .header-dashboard
+        a(href='/home')
+            .header-image
+                img(src='/images/logo.png', alt='')
+        .infos-header-title
+            h1 Usuários 
+    block inner
+        .app-content
+            ul.list-dashboard-filters
+                li.item-filter-dashboard.filter-list-name: a Nome:
+                li.item-filter-dashboard.filter-list-email: a E-mail:
+                li.item-filter-dashboard.filter-list-company: a Empresa:
+                li.item-filter-dashboard.filter-list-website: a Website:
+                li.item-filter-dashboard.filter-list-address: a Endereço:
+            each val in result
+                li.item-list
+                    a(href=`/account/${val._id}`)
+                        span.list-name
+                            p= val.name
+                        span.list-email
+                            p= val.email
+                        span.list-company
+                            p= val.company
+                        span.list-website
+                            p= val.websites
+                        span.list-address
+                            p #{val.address.street} , #{val.address.suite}

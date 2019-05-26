@@ -1,0 +1,20 @@
+{
+  "name": "my-server",
+  "version": "1.0.0",
+  "description": "Projeto para empresa Mutant",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Richard Passos",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^2.6.2",
+    "envalid": "^5.0.0",
+    "express": "^4.16.4",
+    "filter-files": "^0.4.0",
+    "pug": "^2.0.3",
+    "request": "^2.88.0",
+    "restify": "^8.3.0"
+  }
+}

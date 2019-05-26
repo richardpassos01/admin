@@ -1,0 +1,18 @@
+version: 1
+services:
+api:
+build: .
+ports:
+  -3000:3000
+enviromnent:
+  MONGO_URL: mongobd
+
+depends_on:
+  - mongodb
+links:
+  - mongodb
+
+mongodb:
+image: mongo:3.5
+ports:
+  - 27017:27017
