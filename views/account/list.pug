@@ -19,7 +19,7 @@ block content
                 li.item-filter-dashboard.filter-list-address: a Endereço:
             each val in result
                 li.item-list
-                    a(href=`/account/${val._id}`)
+                    a(href=`/account/${val.id}`)
                         span.list-name
                             p= val.name
                         span.list-email
@@ -27,6 +27,6 @@ block content
                         span.list-company
                             p= val.company
                         span.list-website
-                            p= val.websites
+                            p= val.website
                         span.list-address
                             p #{val.address.street} , #{val.address.suite}
